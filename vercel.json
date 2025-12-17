@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "php-login-register/**/*.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/php-login-register/$1"
+    }
+  ],
+  "functions": {
+    "php-login-register/**/*.php": {
+      "runtime": "php@8.2"
+    }
+  }
+}
