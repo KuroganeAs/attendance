@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: attendance-system
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+
+databases:
+  - name: attendance-db
+    databaseName: attendance_system
+    user: attendance_user
+    plan: free
+
